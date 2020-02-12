@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<title>Brandzbix</title>
+
+
+<script>
+		(function(){
+			var docElem = document.documentElement;
+
+			window.lazySizesConfig = window.lazySizesConfig || {};
+
+			window.lazySizesConfig.loadMode = 1;
+
+			//set expand to a higher value on larger displays
+			window.lazySizesConfig.expand = Math.max(Math.min(docElem.clientWidth, docElem.clientHeight, 1222) - 1, 359);
+			window.lazySizesConfig.expFactor = lazySizesConfig.expand < 380 ? 3 : 2;
+		})();
+	</script>
+	
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" integrity="sha256-auPoJwk/+RK6KSkib92Dkq1Y5hEkZvKtvSwucs15Skg=" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjmdfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="js/lazysizes.min.js" async=""></script>
+
+
+<head>
+
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+       <nav>
+          <div class="menu-icon">
+             <i class="fa fa-bars fa-2x"></i>
+          </div>
+          <div class="logo">
+             <img src="img/logo.png">
+          </div>
+          <div class="menu">
+             <ul>
+               <li><a href="#">HOME</a></li>
+               <li><a href="#">NEWS</a></li>
+               <li><a href="#">STORE</a></li>
+               <li><a href="#">BLOGS</a></li>
+               <li><a href="#">CONTACT US</a></li>                                      
+				<li><a href="#"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
+               <li><a href="#" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
+               <li><a href="#" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i> Cart</a></li>    
+			  </ul>
+          </div>
+       </nav>
+    </header>         
+</div>
+<section class="banner-sec">
+	<div class="container-fluid">
+		
+	</div>
+</section>
+
+
+
+</body>
+
+<script>
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+</script>
+</html>

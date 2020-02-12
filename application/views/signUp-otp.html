@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brandzbix</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/docs.theme.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+<script src="js/popper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="owlcarousel/owl.carousel.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.classyscroll.js"></script>
+<link rel="stylesheet" media="screen" href="css/jquery.classyscroll.css" />        
+  <script>
+            $(document).ready(function() {
+                $('.scrollbars').ClassyScroll();
+            });
+        </script>
+  <script>
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 75) {
+			$(".clearHeader").addClass("darkHeader");
+		} else {
+			$(".clearHeader").removeClass("darkHeader");
+		}
+	});
+</script>
+</head>
+<body>
+
+<section class="sign-up-pass">
+	<div class="container-fluid sign-up-pass-back">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="sign-up-pass-frm">
+					<div class="logo-sec">
+						<img src="img/logo.png">
+						<h3>Rest Password</h3>
+					</div>
+					<div class="sign-up-pass-form">
+					<h3>Sign Up</h3>
+					<p>We have send an OTP to your mobile number and email ID for Verification</p>
+						<form>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group form-group-sm">
+										<label for="firstname" class="control-label">Enter OTP <span>OTP: 0:5</span></label>
+										<input type="password" class="form-control" placeholder="****">
+										<p class="resend-otp"><a href="#">Resend OTP</a></p>
+									</div>
+								</div>																
+								
+								<div class="col-md-12 sign-up-otp-btn">
+									<button class="send-otp-sub">SUBMIT</button>
+								</div>
+								<!--<div class="col-md-12">
+									<div class="btn-sec">
+										<p><input class="chck" type="checkbox" name="term"> i agree to the <a href="#">term and conditions</a></p>
+									</div>
+									<div class="btns">
+											<button class="send-otp">SEND OTP</button>
+											<span>or</span>
+											<button class="facebook-btn">Sign in with facebook</button>
+											<button class="google-btn">Sign in with Google</button>
+											<p>Allready have an account? <a href="#">Login</a></p>
+									</div>
+								</div>-->
+							</div>							
+							
+						</form>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
+
+
+ <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<script>
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+</script>
+
+<script>
+	// optional
+		$('#blogCarousel').carousel({
+				interval: 5000
+		});
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 5,
+          nav: true,
+          loop: false,
+          margin: 20
+        }
+      }
+    })
+  })
+</script>
+<script>
+	function copyToClipboard(element) {
+	  var $temp = $("<input>");
+	  $("body").append($temp);
+	  $temp.val($(element).text()).select();
+	  document.execCommand("copy");
+	  $temp.remove();
+	}
+</script>
+
+<script>
+	$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});
+</script>
+
+</html>

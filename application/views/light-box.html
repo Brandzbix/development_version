@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Brandzbix</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+ <link rel="stylesheet" href="css/client-style.css">
+   <link rel="stylesheet" href="css/docs.theme.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<style>
+  .row {
+  margin: 15px;
+}
+
+   .scrollbars{
+	width: 100%;
+	height:545px
+	}
+.clearHeader {
+  background-color: #000;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;  
+  -webkit-transition: background 1s; /* For Safari 3.1 to 6.0 */
+  transition: background 1s;
+  z-index: 99;
+}
+
+.clearHeader.darkHeader {
+ background-color:#000;
+ z-index: 999;
+}
+
+ 
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no" class="">
+
+<header class="navbar-sec" id="topheader">
+	<nav class="clearHeader">
+	<div class="container-fluid">
+		<div class="menu-icon">
+		<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo-new.png">
+			</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="index.html">HOME</a></li>
+				<!-- <li><a class="" href="news.html">NEWS</a></li> -->
+				<!-- <li><a class="" href="store.html">STORE</a></li> -->
+				<li><a class="" href="job.html">JOBS</a></li>
+				<li><a class="" href="coupon.html">COUPONS</a></li>
+				<li><a class="" href="#">PRODUCTS</a></li>
+				<li class="center-link"><a class="" href="#">QR CODE</a></li>
+				<!-- <li class="center-link"><a class="" href="blog.html">BLOGS</a></li>								 -->
+				<li><a class="" href="client-login.html"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
+				<li><a class="" href="client-login.html" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
+				<!-- <li class="count-kart"><a class="" href="add-kart.html" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i><span class="kart-box">1</span> Cart</a></li>								 -->
+				<li class="profile-dlt">
+					<a href="#" onclick="toggler('myContent');"><img src="img/complent.png"></a>					
+				</li>
+			</ul>						
+            
+            
+		</div>
+		</div>
+	</nav>
+</header>
+<div class="prfle"  id="myContent">
+	<div class="prfl-dtl">
+		<div class="pro-img">
+			<img src="img/complent.png">
+		</div>
+		<h3>Rakesh Sharma<span>Andorid Developer</span></h3>
+	</div>
+	
+	<ul>
+		<!--li><a href=""><img src="img/wishlist.png">Wish List</a></li>-->
+		<li><a href="">Orders</a></li>		
+		<li><a href="user-profile.html">View Profile</a></li>
+		<li><a href="client-login.html">Logout</a></li>
+	</ul>
+</div>
+<section class="client-pro-sec">
+	<div class="container-fluid">
+		<div class="row">
+			<a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+				<img src="https://unsplash.it/600.jpg?image=251" class="img-fluid rounded">
+			</a>
+			<a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+				<img src="https://unsplash.it/600.jpg?image=252" class="img-fluid rounded">
+			</a>
+			<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+				<img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+			</a>
+			<a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-3">
+				<img src="https://unsplash.it/600.jpg?image=253" class="img-fluid rounded">
+			</a>
+		</div>		
+	</div>
+</section>
+<section>
+	<footer class="footer-des">
+		<div class="container-fluid">
+			<div class="row">
+				<ul class="list-inline">
+					<li>
+						<a href="https://www.facebook.com/brandzbix/"><img src="img/facebook-new.png"></a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/brandzbix/"><img src="img/instagram-new.png"></a>
+					</li>
+					<li>
+						<a href="linkedin.com/company/brandzbix"><img src="img/linkedin-new.png"></a>
+					</li>			   							   	
+				</ul>
+			</div>
+				 
+			<div class="row">   
+				<ul class="menu list-inline">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="store.html">Store</a>
+					</li>
+					<li>
+						<a href="job.html">Jobs</a>
+					</li>
+					<li>
+						<a href="coupon.html">Coupon</a>
+					</li>
+					<li>
+						<a href="blog.html">Blogs</a>
+					</li>
+					<li>
+						<a href="advertise.html">Advertise with us</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="hart-beat">
+					<h3>Made with</h3>
+					<div class="center">
+						<div class="heart"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div> 
+	</footer>
+	<div class="copyright">
+		<div class="container-fluid">
+			<div class="row text-center">
+			   <p>Copyright © All RIGHTS RESERVED | <a href="#"> BRANDSBIX 2019.</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-de7e2ef6bfefd24b79a3f68b414b87b8db5b08439cac3f1012092b2290c719cd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script id="rendered-js">
+      $(document).on("click", '[data-toggle="lightbox"]', function (event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+      //# sourceURL=pen.js
+    </script>
+<script>
+
+function toggler(divId) {
+    $("#" + divId).toggle();
+}
+
+
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+	
+	$(document).ready(function(){
+  $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+    
+    $(".zoom").hover(function(){
+		
+		$(this).addClass('transition');
+	}, function(){
+        
+		$(this).removeClass('transition');
+	});
+});
+    
+</script>
+
+</body>
+</html>

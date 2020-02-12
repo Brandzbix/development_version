@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Brandzbix</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/client-style.css">
+  <link rel="stylesheet" href="css/docs.theme.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+   <!-- <script src="js/jquery.min.js"></script> -->
+  
+   <script src="js/jquery.min.js"></script>
+   <script src="owlcarousel/owl.carousel.js"></script>
+  
+  <script>
+            $(document).ready(function() {
+                $('.scrollbars').ClassyScroll();
+            });
+        </script>
+  <script>
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 75) {
+			$(".clearHeader").addClass("darkHeader");
+		} else {
+			$(".clearHeader").removeClass("darkHeader");
+		}
+	});
+</script>
+  
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
+</head>
+<body>
+<header class="navbar-sec" id="topheader">
+	<nav class="clearHeader">
+	<div class="container-fluid">
+		<div class="menu-icon">
+		<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo-new.png">
+			</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a class="active" href="index.html">HOME</a></li>
+				<li><a class="" href="news.html">NEWS</a></li>
+				<li><a class="" href="store.html">STORE</a></li>
+				<li><a class="" href="job.html">JOBS</a></li>
+				<li><a class="" href="coupon.html">COUPONS</a></li>		
+				<li><a class="" href="dealwithus.html">DEALS</a></li>
+				<li class="center-link"><a class="" href="quize.html">QUIZE</a></li>				
+				<li><a class="" href="client-login.html"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
+				<li><a class="" href="client-login.html" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
+				<li class="count-kart"><a class="" href="add-kart.html" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i><span class="kart-box">1</span> Cart</a></li>								
+				<li class="content-div" ><a class="" href="user-message-box.html" style="font-weight:600;"><i class="fa fa-envelope" style="margin-right:4px;"></i></a>
+					<span class="msg-noti">2</span>
+				</li>
+				<li class="profile-dlt">
+					<a href="#" onclick="toggler('myContent');"><img src="img/complent.png"></a>					
+				</li>
+			</ul>						
+            
+            
+		</div>
+		</div>
+	</nav>
+</header> 
+<div class="prfle"  id="myContent">
+	<div class="prfl-dtl">
+		<div class="pro-img">
+			<img src="img/complent.png">
+		</div>
+		<h3>Rakesh Sharma<span>Andorid Developer</span></h3>
+	</div>
+	
+	<ul>
+		<!--li><a href=""><img src="img/wishlist.png">Wish List</a></li>-->
+		<li><a href="myorder.html">Orders</a></li>		
+		<li><a href="user-profile.html">View Profile</a></li>
+		<li><a href="client-login.html">Logout</a></li>
+	</ul>
+</div>
+
+<section class="client-pro-sec">
+	<div class="container-fluid client-back">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="compny-detail">
+					<div class="compny-img">
+						<img src="img/compny-img.jpg">
+						<a href="#">www.website.com</a>
+					</div>
+					<div class="compny-hed">
+						<h3>Web site</h3>
+						<h4>9569636323</h4>
+						<h4><a href="#">abc@gmail.com</a></h4>
+						<h4>Noida, Uttar Pradesh</h4>
+						<h4>
+							<a href="#"><img src="img/facebook-pro.png"></a>
+							<a href="#"><img src="img/instagram-pro.png"></a>
+							<a href="#"><img src="img/linked-pro.png"></a>
+							<a href="#"><img src="img/glass-pro.jpg"></a>
+							<a href="#"><img src="img/map.png"></a>
+						</h4>
+					</div>
+					<div class="review">
+						<div class="star-re">
+							<span>3.9</span>
+							<img src="img/star-re.png">
+							<img src="img/star-re.png">
+							<img src="img/star-re.png">
+							<img src="img/star-re.png">
+							<img src="img/star-re-hf.png">
+							<button class="write-review" data-toggle="modal" data-target="#product_view">Write a Review</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container about-sec">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="about-hd">
+					<h3>About Us </h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+					Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+					when an unknown printer took a galley of type and scrambled it to make a type
+					specimen book. It has survived not only five centuries, but also the leap into
+					electronic typesetting, remaining essentially unchanged. </p>
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="photo-hd">
+					<h3>Photos</h3>					
+					<div class="row photo-list">
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 company-pic">
+							<img src="img/compny-pic.jpeg">
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 company-pic">
+							<img src="img/compny-pic.jpeg">
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 company-pic">
+							<img src="img/compny-pic.jpeg">
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 company-pic">
+							<img src="img/compny-pic.jpeg">
+						</div>						
+						<div class="col-md-12 btn-all-img">
+							<a class="all-img" href="brand-gallery.html">View More</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="coupon-hd">
+					<div class="coupon-hn">
+						<h3>Coupons</h3>
+						</div>
+						<div class="row">
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> 	
+								<div class="coupn-b">
+									<div class="brand-logo">
+										<img src="img/cera3.png">
+										<span>Use Coupon Code</span>
+										<span class="coupon-de">
+											<h3>UNBOX200</h3>
+											<label>
+												<i style="display: block;" class="fa fa-clone" aria-hidden="true"></i>Copy
+											<label>
+										</label></label></span>
+										<h3>Get 20% Off</h3>
+									</div>
+									<div class="trm-con">																		
+										<p><span style="color:#f00;">*</span>Minimum oreder Rs.499</p>
+										<p><span style="color:#f00;">*</span>New user only</p> 
+									</div>
+									<div class="link-btn">
+										<a href="" class="web-link">Website</a>										
+									</div>
+								</div>								
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> 	
+								<div class="coupn-b">
+									<div class="brand-logo">
+										<img src="img/cera3.png">
+										<span>Use Coupon Code</span>
+										<span class="coupon-de">
+											<h3>UNBOX200</h3>
+											<label>
+												<i style="display: block;" class="fa fa-clone" aria-hidden="true"></i>Copy
+											<label>
+										</label></label></span>
+										<h3>Get 20% Off</h3>
+									</div>
+									<div class="trm-con">																		
+										<p><span style="color:#f00;">*</span>Minimum oreder Rs.499</p>
+										<p><span style="color:#f00;">*</span>New user only</p> 
+									</div>
+									<div class="link-btn">
+										<a href="" class="web-link">Website</a>										
+									</div>
+								</div>								
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> 	
+								<div class="coupn-b">
+									<div class="brand-logo">
+										<img src="img/cera3.png">
+										<span>Use Coupon Code</span>
+										<span class="coupon-de">
+											<h3>UNBOX200</h3>
+											<label>
+												<i style="display: block;" class="fa fa-clone" aria-hidden="true"></i>Copy
+											<label>
+										</label></label></span>
+										<h3>Get 20% Off</h3>
+									</div>
+									<div class="trm-con">																		
+										<p><span style="color:#f00;">*</span>Minimum oreder Rs.499</p>
+										<p><span style="color:#f00;">*</span>New user only</p> 
+									</div>
+									<div class="link-btn">
+										<a href="" class="web-link">Website</a>										
+									</div>
+								</div>								
+							</div>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12"> 	
+								<div class="coupn-b">
+									<div class="brand-logo">
+										<img src="img/cera3.png">
+										<span>Use Coupon Code</span>
+										<span class="coupon-de">
+											<h3>UNBOX200</h3>
+											<label>
+												<i style="display: block;" class="fa fa-clone" aria-hidden="true"></i>Copy
+											<label>
+										</label></label></span>
+										<h3>Get 20% Off</h3>
+									</div>
+									<div class="trm-con">																		
+										<p><span style="color:#f00;">*</span>Minimum oreder Rs.499</p>
+										<p><span style="color:#f00;">*</span>New user only</p> 
+									</div>
+									<div class="link-btn">
+										<a href="" class="web-link">Website</a>										
+									</div>
+								</div>								
+							</div>							
+						</div>
+					</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="jobs-hd">
+					<h3>Jobs</h3>
+					<div class="row">
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div><div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+							<div class="job-opn">
+								<h4>Sr. Web Designer <span>Abc pvt. ltd, New Delhi</span></h4>
+								<h5><a href="#"><img src="img/job-hrt.png"></a><span>1 day ago</span></h5>
+							</div>
+						</div>
+					</div>
+					<div class="no-jos" style="display:none;">
+					<p>There are currently no open jobs in  Logo pvt. ltd</p>
+					<img src="img/sad-smile.png">
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col-md-12">
+				<div class="product-hd">
+					<h3>Products / Services</h3>
+					<div class="row">
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+							<div class="product-pic">
+								<img src="img/ladis-bag2.png">
+								<h3>Vans Sk8-Hi</h3>
+								<p>Lorem Ipsum is simply dummy text of the</p>
+								<a class="visit-web" href="#">Visit Website</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+							<div class="product-pic">
+								<img src="img/ladis-bag2.png">
+								<h3>Vans Sk8-Hi</h3>
+								<p>Lorem Ipsum is simply dummy text of the</p>
+								<a class="visit-web" href="#">Visit Website</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+							<div class="product-pic">
+								<img src="img/ladis-bag2.png">
+								<h3>Vans Sk8-Hi</h3>
+								<p>Lorem Ipsum is simply dummy text of the</p>
+								<a class="visit-web" href="#">Visit Website</a>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+							<div class="product-pic">
+								<img src="img/ladis-bag2.png">
+								<h3>Vans Sk8-Hi</h3>
+								<p>Lorem Ipsum is simply dummy text of the</p>
+								<a class="visit-web" href="#">Visit Website</a>
+							</div>
+						</div>
+						<!-- <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6 product-pic"> -->
+							<!-- <img src="img/compny-pic.jpeg"> -->
+							<!-- <a class="visit-web" href="#">Visit Website</a> -->
+						<!-- </div> -->
+						<!-- <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6 product-pic"> -->
+							<!-- <img src="img/compny-pic.jpeg"> -->
+							<!-- <a class="visit-web" href="#">Visit Website</a> -->
+						<!-- </div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	
+</section>
+
+<section>
+	<footer class="footer-des">
+		<div class="container-fluid">
+			<div class="row">
+				<ul class="list-inline">
+					<li>
+						<a href="https://www.facebook.com/brandzbix/"><img src="img/facebook-new.png"></a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/brandzbix/"><img src="img/instagram-new.png"></a>
+					</li>
+					<li>
+						<a href="linkedin.com/company/brandzbix"><img src="img/linkedin-new.png"></a>
+					</li>			   							   	
+				</ul>
+			</div>
+				 
+			<div class="row">   
+				<ul class="menu list-inline">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="store.html">Store</a>
+					</li>
+					<li>
+						<a href="job.html">Jobs</a>
+					</li>
+					<li>
+						<a href="coupon.html">Coupon</a>
+					</li>
+					<li>
+						<a href="dealwithus.html">Deals</a>
+					</li>
+					<li>
+						<a href="quize.html">Qiuz</a>
+					</li>
+					<li>
+						<a href="blog.html">Blogs</a>
+					</li>
+					<li>
+						<a href="advertise.html">Advertise with us</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="hart-beat">
+					<h3>Made with</h3>
+					<div class="center">
+						<div class="heart"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div> 
+	</footer>
+	<div class="copyright">
+		<div class="container-fluid">
+			<div class="row text-center">
+			   <p>Copyright © All RIGHTS RESERVED | <a href="#"> BRANDSBIX 2019.</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="review-pop">
+	<div class="modal fade product_view" id="product_view">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Brandzbix
+					<span>A1-C , Ground Floor, A Block, Sector 16, Noida, Uttar Pradesh</span>
+						<p class="box-star">
+						<b>3.9</b>
+						<img src="img/star-re.png">
+						<img src="img/star-re.png">
+						<img src="img/star-re.png">
+						<img src="img/star-re.png">
+						<img src="img/star-re-hf.png">							
+					</p>
+					</h3>					
+					<a href="#" data-toggle="modal" data-target="#write_view" class="class pull-right">Write Review</a> 					
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="my-custom-scrollbar my-custom-scrollbar-primary">			
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="review-box">
+									<h3>Sanaulha Ashrifi</h3>
+									<div class="star-re">							
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re-hf.png">							
+									</div>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+									the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+									of type and scrambled it to make a type specimen book. </p>
+								</div> 
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="review-box">
+									<h3>Sanaulha Ashrifi</h3>
+									<div class="star-re">							
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re-hf.png">							
+									</div>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+									the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+									of type and scrambled it to make a type specimen book. </p>
+								</div> 
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="review-box">
+									<h3>Sanaulha Ashrifi</h3>
+									<div class="star-re">							
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re-hf.png">							
+									</div>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+									the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+									of type and scrambled it to make a type specimen book. </p>
+								</div> 
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+								<div class="review-box">
+									<h3>Sanaulha Ashrifi</h3>
+									<div class="star-re">							
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re.png">
+										<img src="img/star-re-hf.png">							
+									</div>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+									the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+									of type and scrambled it to make a type specimen book. </p>
+								</div> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="new-poop">
+	<div class="modal fade write_view" id="write_view">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title">Brandzbix					
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+							<div class="bak-box">
+								<div class="wrt-review">
+									<img src="img/user-login.png">
+									<h3>Mahesh Barwal </h3>
+								</div>
+								<div class="hide-id">
+									<h3>Want to post anonymously? 
+									
+									<div class="switchToggle">
+										<input type="checkbox" id="switch">
+										<label for="switch">Toggle</label>
+									</div>																				
+									<div class="rating-str">
+										<img src="img/rt-str.png">
+										<img src="img/rt-str.png">
+										<img src="img/rt-str.png">
+										<img src="img/rt-str.png">
+										<img src="img/rt-str.png">
+									</div>
+									
+
+									<div class="rate-input">
+										<textarea class="form-control" rows="2"  placeholder="Share details of your own experience"></textarea>
+										
+										<div class="btn-sub">
+											<button class="post-bt">Post</button>
+											<button class="cancel-bt">Cancel</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+ <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<script>
+
+function toggler(divId) {
+    $("#" + divId).toggle();
+}
+
+
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+</script>
+
+
+<script>
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+</script>
+
+<script>
+	$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});
+</script>
+
+
+
+<script>
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+  event.preventDefault();
+  $(this).ekkoLightbox();
+});
+</script>
+
+</html>

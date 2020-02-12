@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Brandzbix</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/docs.theme.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+  <script src="js/popper.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+   <!-- <script src="js/jquery.min.js"></script> -->
+   <script src="owlcarousel/owl.carousel.js"></script>
+   <style>	
+   <!-- Make the image fully responsive -->
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
+  <script>
+            $(document).ready(function() {
+                $('.scrollbars').ClassyScroll();
+            });
+        </script>
+  <script>
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 75) {
+			$(".clearHeader").addClass("darkHeader");
+		} else {
+			$(".clearHeader").removeClass("darkHeader");
+		}
+	});
+</script>
+</head>
+<body>
+<header class="navbar-sec" id="topheader">
+	<nav class="clearHeader">
+	<div class="container-fluid">
+		<div class="menu-icon">
+		<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo-new.png">
+			</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a class="" href="index.html">HOME</a></li>
+				<li><a class="" href="news.html">NEWS</a></li>
+				<li><a class="" href="store.html">STORE</a></li>
+				<li><a class="active" href="job.html">JOBS</a></li>
+				<li><a class="" href="coupon.html">COUPONS</a></li>
+				<li><a class="" href="dealwithus.html">DEALS</a></li>
+				<li class="center-link"><a class="" href="quize.html">QUIZE</a></li>						
+				<li><a class="" href="signIn.html"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
+				<li><a class="" href="signUp.html" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
+				<li class="count-kart"><a class="" href="add-kart.html" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i><span class="kart-box">1</span> Cart</a></li>								
+				<li class="profile-dlt">
+					<a href="#" onclick="toggler('myContent');"><img src="img/complent.png"></a>					
+				</li>
+			</ul>						
+            
+            
+		</div>
+		</div>
+	</nav>
+</header> 
+<div class="prfle"  id="myContent">
+	<div class="prfl-dtl">
+		<div class="pro-img">
+			<img src="img/complent.png">
+		</div>
+		<h3>Rakesh Sharma<span>Andorid Developer</span></h3>
+	</div>
+	
+	<ul>
+		<!--li><a href=""><img src="img/wishlist.png">Wish List</a></li>-->
+		<li><a href="myorder.html">Orders</a></li>		
+		<li><a href="user-profile.html">View Profile</a></li>
+		<li><a href="client-login.html">Logout</a></li>
+	</ul>
+</div>
+
+
+<section class="jobs-head">
+	<div class="container-fluid form-srch-job">
+		<div class="row">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4 text-input">
+								<label>Keyword</label>
+								 <input type="text" required="" placeholder="Skills, Designations" value="" name="name" class="form-control">
+							</div>
+							<div class="col-md-3 text-input">
+								<label>Location</label>
+								 <input type="text" required="" placeholder="City / State" value="" name="name" class="form-control">
+							</div>
+							<div class="col-md-2 text-input">
+								<label>Experience</label>	
+								<select class="form-control drop-down-icon">
+								  <option value="volvo" disabled>Experience</option>
+								  <option value="saab">06 Month</option>
+								  <option value="mercedes">1 year</option>
+								  <option value="audi">2 Year</option>
+								</select>								
+							</div>
+							<div class="col-md-2 text-input">
+								<label>Salary</label>
+								<select class="form-control drop-down-icon">
+								  <option value="volvo" disabled>Salary</option>
+								  <option value="saab">1 Lakh</option>
+								  <option value="mercedes">2 Lakh</option>
+								  <option value="audi">3 Lakh</option>
+								</select>								
+							</div>
+							<div class="col-md-1 text-input ">
+								<a href="job-search.html" class="job-srch-btn">Search</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container job-head-back">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="job-head">
+					<h3>Result</h3>					
+				</div>
+				<div class="related-job">
+					<h3>Sort By:</h3>
+					<div class="form-group short-info">					
+						<select class="shorted">
+						  <option value="date">Date</option>
+						  <option value="relevance">Relevance</option>							  
+						</select>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-xl-9 col-lg-9 col-md-9 col-sm-7 col-12">
+			
+				<div class="job-srch-box">
+					<h3>1-50 of 1292 Web Designer Jobs</h3>					
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+				<div class="job-list">
+					<a href="job-dis.html">
+						<h3>Sales Consultants Wanted!<img src="img/logo.png"></h3>
+						<h4>Location: Sec 16 Noida <span>Sales Outbound</span></h4>
+						<ul>
+							<li>We provide a friendly and  diverse workplace environment!</li>
+							<li>Based in Takapuna on North Shore!</li>
+						</ul>
+					</a>
+					<button class="save-job"><img src="img/star.png">Save Job</button>
+					<a href="job-dis.html" class="apply-job">Apply</a>
+				</div>
+
+				<div class="page-nation">
+					<nav aria-label="...">
+						<ul class="pager" role="tablist">
+							<li class="previous" onclick="goTo(1);"><a href="#"><img src="img/left-page.png"></a></li>
+							<li class="active" id="first">
+								<a href="#" role="tab">1</a>
+							</li>
+							<li>
+								<a href="#" role="tab">2</a>
+							</li>
+							<li>
+								<a href="#" role="tab">3</a>
+							</li>
+							<li>
+								<a href="#" role="tab">4</a>
+							</li>
+							<li id="last">
+								<a href="#" role="tab">5</a>
+							</li>                    
+							<li class="next" onclick="goTo(2);"><a href="#"><img src="img/right-page.png"></a></li>
+						</ul>
+					</nav>					
+				</div>
+				
+			</div>
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-5 col-12">
+				<div class="alrt-email">
+					<p>Get best matched jobs on your email.  No registration Brandzbix</p>
+					<a class="alrt-msg" href="#popup1">Creat Job Alart</a>
+				</div>
+				
+				<div class="save-job-box">
+					<h3>Save Jobs <img src="img/save-star.png"></h3>
+					<div class="save-jobs-in">
+						<a href="#">
+							<h3>Sales-Outbound</h3>
+							<h4>Brand Developers Ltd <span>Sec-16 Noida</span></h4>
+						</a>
+					</div>	
+					<div class="save-jobs-in">
+						<a href="#">
+							<h3>Sales-Outbound</h3>
+							<h4>Brand Developers Ltd <span>Sec-16 Noida</span></h4>
+						</a>
+					</div>
+					<div class="save-jobs-in">
+						<a href="#">
+							<h3>Sales-Outbound</h3>
+							<h4>Brand Developers Ltd <span>Sec-16 Noida</span></h4>
+						</a>
+					</div>
+					<a class="view-all" href="save-jobs.html">View All</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section>
+	<footer class="footer-des">
+		<div class="container-fluid">
+			<div class="row">
+				<ul class="list-inline">
+					<li>
+						<a href="https://www.facebook.com/brandzbix/"><img src="img/facebook-new.png"></a>
+					</li>
+					<li>
+						<a href="https://www.instagram.com/brandzbix/"><img src="img/instagram-new.png"></a>
+					</li>
+					<li>
+						<a href="linkedin.com/company/brandzbix"><img src="img/linkedin-new.png"></a>
+					</li>			   							   	
+				</ul>
+			</div>
+				 
+			<div class="row">   
+				<ul class="menu list-inline">
+					<li>
+						<a href="index.html">Home</a>
+					</li>
+					<li>
+						<a href="news.html">News</a>
+					</li>
+					<li>
+						<a href="store.html">Store</a>
+					</li>
+					<li>
+						<a href="job.html">Jobs</a>
+					</li>
+					<li>
+						<a href="coupon.html">Coupon</a>
+					</li>
+					<li>
+						<a href="dealwithus.html">Deals</a>
+					</li>
+					<li>
+						<a href="quize.html">Qiuz</a>
+					</li>
+					<li>
+						<a href="blog.html">Blogs</a>
+					</li>
+					<li>
+						<a href="advertise.html">Advertise with us</a>
+					</li>
+					<li>
+						<a href="contact-us.html">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="hart-beat">
+					<h3>Made with</h3>
+					<div class="center">
+						<div class="heart"></div>						
+					</div>
+				</div>
+			</div>
+		</div> 
+	</footer>
+	<div class="copyright">
+		<div class="container-fluid">
+			<div class="row text-center">
+			   <p>Copyright © All RIGHTS RESERVED | <a href="#"> BRANDSBIX 2019.</a></p>
+			</div>
+		</div>
+	</div>
+</section>
+	
+	
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>Here i am</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content-b">
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" required="" placeholder="Enter Your email" value="" name="email" class="form-control">						
+			</div>
+			<button class="job-alrt-btn">Submit</button>
+		</div>
+	</div>
+</div>
+
+
+ <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<script>
+function toggler(divId) {
+    $("#" + divId).toggle();
+}
+
+
+
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+</script>
+
+<script>
+	// optional
+		$('#blogCarousel').carousel({
+				interval: 5000
+		});
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 5,
+          nav: true,
+          loop: false,
+          margin: 20
+        }
+      }
+    })
+  })
+</script>
+<script>
+	function copyToClipboard(element) {
+	  var $temp = $("<input>");
+	  $("body").append($temp);
+	  $temp.val($(element).text()).select();
+	  document.execCommand("copy");
+	  $temp.remove();
+	}
+</script>
+
+<script>
+	$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});
+</script>
+</html>

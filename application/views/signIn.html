@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Brandzbix</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style.css"/>
+<link rel="stylesheet" href="css/docs.theme.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+<script src="js/popper.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
+<!-- <script src="js/jquery.min.js"></script> -->
+<script src="owlcarousel/owl.carousel.js"></script>
+<link rel="stylesheet" href="css/jquery.classyscroll.css"/> 
+<script src="owlcarousel/owl.carousel.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="js/jquery.classyscroll.js"></script>
+<link rel="stylesheet" media="screen" href="css/jquery.classyscroll.css" />
+
+		
+   
+   <script>
+            $(document).ready(function() {
+                $('.scrollbars').ClassyScroll();
+            });
+        </script>
+  <script>
+	$(window).scroll(function() {    
+		var scroll = $(window).scrollTop();
+
+		if (scroll >= 75) {
+			$(".clearHeader").addClass("darkHeader");
+		} else {
+			$(".clearHeader").removeClass("darkHeader");
+		}
+	});
+</script>
+  
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+      width: 100%;
+      height: 100%;
+  }
+  </style>
+</head>
+<body>
+<!--<header class="navbar-sec" id="topheader">
+	<nav class="clearHeader">
+	<div class="container-fluid">
+		<div class="menu-icon">
+		<i class="fa fa-bars fa-2x"></i>
+		</div>
+		<div class="logo">
+			<a href="index.html">
+				<img src="img/logo-new.png">
+			</a>
+		</div>
+		<div class="menu">
+			<ul>
+				<li><a class="" href="index.html">HOME</a></li>
+				<li><a class="" href="news.html">NEWS</a></li>
+				<li><a class="" href="store.html">STORE</a></li>
+				<li><a class="" href="blog.html">BLOGS</a></li>
+				<li class="center-link"><a href="contact-us.html">CONTACT US</a></li>                                      
+				<li><a class="active" href="signIn.html"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
+				<li><a class="" href="signUp.html" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
+				<li class="count-kart"><a class="" href="confermation-address.html" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i> Cart</a><span class="kart-box">1</span></li>
+			</ul>
+		</div>
+		</div>
+	</nav>
+</header>--> 
+
+
+<section class="sign-in">
+	<div class="container-fluid signin-back">
+	<div class="row">
+			<div class="col-md-12">
+				<div class="home-btn">
+					<a href="index.html">Home</a>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="sign-in-frm">
+					<div class="logo-sec">
+						<img src="img/logo.png">
+						<h3>LOGIN</h3>
+					</div>
+					<div class="sign-in-form">
+						<form>
+							<div class="row">								
+								<div class="col-md-12">
+									<div class="form-group">
+										<!--<label for="lastname" class="control-label">Email address</label>-->
+										<input type="emial" class="form-control" id="lastname" placeholder="abc@gmail.com">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<!--<label for="lastname" class="control-label">Password</label>-->
+										<input type="password" class="form-control" id="lastname" placeholder="Password">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="signin-btn-sec">
+										<p><input class="chck" type="checkbox" name="term"> Remember Me</p>
+									</div>
+									<div class="signin-btns">
+											<button class="send-otp">LOGIN</button>
+											<span>or</span>
+											<button class="facebook-btn"><i class="fa fa-facebook-official" aria-hidden="true"></i> facebook</button>
+											<button class="google-btn"><i class="fa fa-google" aria-hidden="true"></i> Google</button>
+											<p>Not Registered? <a  href="forget-password.html">Forget Password?</a><a style="display:block;" href="signUp.html">Create an account</a> </p>
+									</div>
+								</div>
+							</div>							
+							
+						</form>
+					</div>					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+ <script src="js/highlight.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+<script>
+ $(document).ready(function() {
+            $(".menu-icon").on("click", function() {
+                  $("nav ul").toggleClass("showing");
+            });
+      });
+
+      // Scrolling Effect
+
+      $(window).on("scroll", function() {
+            if($(window).scrollTop()) {
+                  $('nav').addClass('black');
+            }
+
+            else {
+                  $('nav').removeClass('black');
+            }
+	})
+</script>
+
+<script>
+	// optional
+		$('#blogCarousel').carousel({
+				interval: 5000
+		});
+</script>
+
+<script>
+  $(document).ready(function() {
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        600: {
+          items: 3,
+          nav: false
+        },
+        1000: {
+          items: 5,
+          nav: true,
+          loop: false,
+          margin: 20
+        }
+      }
+    })
+  })
+</script>
+<script>
+	function copyToClipboard(element) {
+	  var $temp = $("<input>");
+	  $("body").append($temp);
+	  $temp.val($(element).text()).select();
+	  document.execCommand("copy");
+	  $temp.remove();
+	}
+</script>
+
+<script>
+	$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});
+</script>
+
+</html>
