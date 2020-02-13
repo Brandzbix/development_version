@@ -1,5 +1,6 @@
 <?php
-include "layouts/header.php"; ?>
+	include "layouts/header.php";
+?>
 <section class="slider-sec">
 	<div class="container-fluid">
 		<div class="row">
@@ -34,68 +35,37 @@ include "layouts/header.php"; ?>
 	</div>
 </section>
 
-<?php 
-$tab_menu = '';
-$tab_content = '';
-$i = 0;
-$connect = mysqli_connect("localhost", "root", "", "brandbix");
-
-foreach($getNewsType as $key => $value){
-	if($i==0){
-		$tab_menu	.='
-			<a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#newSection'.$value["news_type_id_pk"].'" role="tab" aria-controls="nav-home" aria-selected="true">
-				<h3>'.$value["news_type_name"].'</h3>
-			</a>
-		';
-		$tab_content .='
-			 <div class="tab-pane fade in active" id="'.$value["news_type_id_pk"].'"> 
-		';
-	}else{
-			$tab_menu	.='
-			<a class="nav-item nav-link" id="nav-home-tab" data-toggle="tab" href="#newSection'.$value["news_type_id_pk"].'" role="tab" aria-controls="nav-home" aria-selected="true">
-				<h3>'.$value["news_type_name"].'</h3>
-			</a>
-		';
-		$tab_content .='
-			 <div class="tab-pane fade" id="newSection'.$value["news_type_id_pk"].'"> 
-		';
-	}
-		$product_query = "SELECT * FROM tbl_news WHERE news_type = '".$value["news_type_id_pk"]."'";
-	 	$product_result = mysqli_query($connect, $product_query);
-		while($sub_row = mysqli_fetch_array($product_result)){
-	    $tab_content .= '
-	    	<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 indian-news">
-				<a href="#">
-					<img src="assets/img/news/'.$sub_row["news_picture"].'">
-					<h3>'.$sub_row["pretty_url"].'</h3>										
-				</a>
-			</div>
-	    ';
-	 	}
-	 	$tab_content .= '<div style="clear:both"></div></div>';
-	 	$i++;
-	}
-?>
-
 <section id="tabs" class="project-tab">
     <div class="container-fluid">
+    	<div class="row">
+			<div class="col-md-12 coupon-head">
+				<h3>TRENDING <span>NEWS</span></h3>
+			</div>
+		</div>
+        <div class="row">
             <div class="col-md-12">
-                <nav>
-                    <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">										
-                        <?php
-						    echo $tab_menu;
-						?>                                       
-                    </div>
-                </nav>
                 <div class="tab-content tab-news-box" id="nav-tabContent">
-                    <?php
-					    echo $tab_content;
-					?>
+                    <div class="tab-pane fade show active" id="ind-news" role="tabpanel" aria-labelledby="nav-home-tab">
+						<div class="row">
+							<?php if(count($trendingNews) > 0): ?>
+								<?php foreach($trendingNews as $key => $value): ?>
+							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 indian-news">
+								<a href="<?php echo base_url().strtolower($value["news_type_name"]).'/'.$value["pretty_url"]; ?>">
+									<img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>">
+									<h3><?php echo $value["news_heading"]; ?></h3>		
+								</a>
+							</div>
+							<?php endforeach; ?>
+							<?php else: ?>
+								<h3>No Record Found</h3>
+							<?php endif; ?>
+						</div>
+                    </div>
                 </div>
             </div>
+        </div>
     </div>
 </section>
-
 
 <section  class="coupon-sec">
 	<div class="container-fluid">

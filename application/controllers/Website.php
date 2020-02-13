@@ -9,8 +9,7 @@
 		}
 		public function index()
 		{
-			$result["news"]	=	$this->NewsModel->getNews();
-			$result["getNewsType"]	=	$this->NewsModel->getNewsType();
+			$result["trendingNews"]	=	$this->NewsModel->getTrendingNews();
 			$this->load->view('index',$result);
 		}
 		public function fetch(){
