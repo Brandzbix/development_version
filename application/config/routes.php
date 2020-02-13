@@ -55,7 +55,6 @@ $route['translate_uri_dashes'] = FALSE;
 
 
 
-$route['news'] 			=	"News/index";
 $route['store'] 		=	"Store/store";
 $route['dealwithus'] 	=	"Dealwithus/dealwithus";
 $route['coupon'] 		=	"Coupon/index";
@@ -72,6 +71,20 @@ $route['return-product']=	"Myorders/returnProduct";
 
 /*Client Profile */
 $route["user-profile"]	=	"userProfile/index";
+
+/*News Section Start*/
+$route['news'] 					=	"News/index";
+$route['trending/(:any)'] 		=	"News/trending/$1";
+/*@@
+	News by category routes
+@@*/
+$route['india'] 				=	"News/india";
+$route['international'] 		=	"News/international";
+$route['business'] 				=	"News/business";
+$route['entertainment'] 		=	"News/entertainment";
+$route['tech'] 					=	"News/tech";
+$route['sports'] 				=	"News/sports";
+
 
 /*ADMIN ROUTES START FROM HERE*/
 include('admin-routes.php');

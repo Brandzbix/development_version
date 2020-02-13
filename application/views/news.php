@@ -6,13 +6,13 @@
 				<div class="col-md-12 main-news-menu">
 					<div class="news-list">
 						<ul>
-							<li><a href="india.html">INDIA</a></li>
-							<li><a href="#">WORLD</a></li>
-							<li><a href="#">MOVIE</a></li>
-							<li><a href="#">TEACH</a></li>
-							<li><a href="#">SPORTS</a></li>
-							<li><a href="#">BUSINESS</a></li>
-							<li><a href="#">STARTUP</a></li>
+							<li><a href="india">INDIA</a></li>
+							<li><a href="international">INTERNATIONAL</a></li>
+							<li><a href="business">BUSINESS</a></li>
+							<li><a href="entertainment">ENTERTAINMENT</a></li>
+							<li><a href="health">HEALTH</a></li>
+							<li><a href="tech">TECH</a></li>
+							<li><a href="sports">SPORTS</a></li>
 						</ul>
 					</div>
 				</div>			

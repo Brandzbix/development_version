@@ -1,4 +1,6 @@
-<?php include "layouts/header.php"; ?>
+<?php 
+	include "layouts/header.php";
+?>
 <section class="main-news-op">
 	<div class="container-fluid top-news">
 		<div class="container" style="padding-left:4px;">
@@ -6,13 +8,13 @@
 				<div class="col-md-12 main-news-menu">
 					<div class="news-list">
 						<ul>
-							<li><a href="india.html">INDIA</a></li>
-							<li><a href="#">WORLD</a></li>
-							<li><a href="#">MOVIE</a></li>
-							<li><a href="#">TEACH</a></li>
-							<li><a href="#">SPORTS</a></li>
-							<li><a href="#">BUSINESS</a></li>
-							<li><a href="#">STARTUP</a></li>
+							<li><a href="india">INDIA</a></li>
+							<li><a href="world">WORLD</a></li>
+							<li><a href="movie">MOVIE</a></li>
+							<li><a href="teach">TEACH</a></li>
+							<li><a href="sports">SPORTS</a></li>
+							<li><a href="business">BUSINESS</a></li>
+							<li><a href="startup">STARTUP</a></li>
 						</ul>
 					</div>
 				</div>			
@@ -23,24 +25,15 @@
 		<div class="row">
 			<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12">				
 				<div class="row">
+				<?php foreach($newsByUrl as $key => $val):?>
 					<div class="col-md-12 full-news">	
-						<h3>Why is the Army using outdated, made in India rifles ...</h3>					
-						<img src="img/army.jpg">						
-						<p>Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
+						<h3><?php echo $val->news_heading; ?></h3>					
+						<img src="<?php echo base_url()."assets/img/news/".$val->news_picture; ?>">						
+						<p class="text-justify" style="font-size: 14px;">
+							<?php echo $val->news_description; ?>
 						</p>
-						<p>Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-							Defence Minister Rajnath Singh has announced that Siachen region is now accessible to tourists region is now accessible to tourists.
-						</p>						
 					</div>
+				<?php endforeach; ?>
 				</div>			
 			</div>
 			

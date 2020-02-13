@@ -1,108 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Brandzbix</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/ico" href="img/brandzbixfavicon.ico">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> -->
-<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&display=swap&subset=latin-ext" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css"/>
-<link rel="stylesheet" href="css/docs.theme.min.css">
-<link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
-<link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
-<script src="js/popper.min.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
-<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.js"></script> -->
-<!-- <script src="js/jquery.min.js"></script> -->
- 
-<script src="owlcarousel/owl.carousel.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
-<script type="text/javascript" src="js/jquery.classyscroll.js"></script>
-<link rel="stylesheet" media="screen" href="css/jquery.classyscroll.css" />
-<style>	
-  /* Make the image fully responsive */
-  .carousel-inner img {
-	  width: 100%;
-	  height: 100%;
-  }
-</style>
-  
-  
-   <script>
-            $(document).ready(function() {
-                $('.scrollbars').ClassyScroll();
-            });
-        </script>
-  <script>
-	$(window).scroll(function() {    
-		var scroll = $(window).scrollTop();
-
-		if (scroll >= 75) {
-			$(".clearHeader").addClass("darkHeader");
-		} else {
-			$(".clearHeader").removeClass("darkHeader");
-		}
-	});
-</script>
-</head>
-<body>
-<header class="navbar-sec" id="topheader">
-	<nav class="clearHeader">
-	<div class="container-fluid">
-		<div class="menu-icon">
-		<i class="fa fa-bars fa-2x"></i>
-		</div>
-		<div class="logo">
-			<a href="index.html">
-				<img src="img/logo-new.png">
-			</a>
-		</div>
-		<div class="menu">
-			<ul>
-				<li><a class="" href="index.html">HOME</a></li>
-				<li><a class="active" href="news.html">NEWS</a></li>
-				<li><a class="" href="store.html">STORE</a></li>
-				<li><a class="" href="job.html">JOBS</a></li>
-				<li><a class="" href="coupon.html">COUPONS</a></li>
-				<li><a class="" href="dealwithus.html">DEALS</a></li>
-				<li class="center-link"><a class="" href="quize.html">QUIZE</a></li>
-				<li><a class="" href="signIn.html"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
-				<li><a class="" href="signUp.html" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
-				<li class="count-kart"><a class="" href="add-kart.html" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i><span class="kart-box">1</span> Cart</a></li>								
-				<li class="profile-dlt">
-					<a href="#" onclick="toggler('myContent');"><img src="img/complent.png"></a>					
-				</li>
-			</ul>						
-            
-            
-		</div>
-		</div>
-	</nav>
-</header> 
-<div class="prfle"  id="myContent">
-	<div class="prfl-dtl">
-		<div class="pro-img">
-			<img src="img/complent.png">
-		</div>
-		<h3>Rakesh Sharma<span>Andorid Developer</span></h3>
-	</div>
-	
-	<ul>
-		<!--li><a href=""><img src="img/wishlist.png">Wish List</a></li>-->
-		<li><a href="myorder.html">Orders</a></li>		
-		<li><a href="user-profile.html">View Profile</a></li>
-		<li><a href="client-login.html">Logout</a></li>
-	</ul>
-</div> 
+<?php include "layouts/header.php"; ?>
 
 <section class="main-news-op">
 	<div class="container-fluid top-news">
@@ -111,13 +7,13 @@
 				<div class="col-md-12 main-news-menu">
 					<div class="news-list">
 						<ul>
-							<li><a href="india.html">INDIA</a></li>
-							<li><a href="#">WORLD</a></li>
-							<li><a href="#">MOVIE</a></li>
-							<li><a href="#">TEACH</a></li>
-							<li><a href="#">SPORTS</a></li>
-							<li><a href="#">BUSINESS</a></li>
-							<li><a href="#">STARTUP</a></li>
+							<li><a href="india">INDIA</a></li>
+							<li><a href="world">WORLD</a></li>
+							<li><a href="movie">MOVIE</a></li>
+							<li><a href="teach">TEACH</a></li>
+							<li><a href="sports">SPORTS</a></li>
+							<li><a href="business">BUSINESS</a></li>
+							<li><a href="startup">STARTUP</a></li>
 						</ul>
 					</div>
 				</div>			
@@ -133,14 +29,14 @@
 				<div class="row">
 					<div class="col-md-12" style="margin-bottom:30px;">
 						<a href="full-news.html">
-							<img src="img/army.jpg">
+							<img src="<?php echo base_url(); ?>assets/img/army.jpg">
 							<h3>Why is the Army using outdated, made in India rifles ...</h3>
 						</a>
 					</div>
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -149,7 +45,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -158,7 +54,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -167,7 +63,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -176,7 +72,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -185,7 +81,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -194,7 +90,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -203,7 +99,7 @@
 				</div>
 				<div class="row india-news">
 					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 img-border">
-						<a href="#"><img src="img/border.jpg"></a>
+						<a href="#"><img src="<?php echo base_url(); ?>assets/img/border.jpg"></a>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-8 col-sm-6 col-12 new-cntnt">						
 						<a href="#"><h3>India opens Siachen area from Base to Kumar post for tourists</h3>
@@ -216,7 +112,7 @@
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 suggst-np">				
 				<div class="row">
 					<div class="col-md-12 citizen-post">
-						<img src="img/citizen-reporter.jpg">
+						<img src="<?php echo base_url(); ?>assets/img/citizen-reporter.jpg">
 					</div>
 				</div>
 				<div class="row suggested-news">
@@ -226,25 +122,25 @@
 						</div>						
 						<div class="suggst-news">
 							<a href="#">
-								<img src="img/mobile-1.png">
+								<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
 								<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
 							</a>
 						</div>
 						<div class="suggst-news">
 							<a href="#">
-								<img src="img/mobile-1.png">
+								<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
 								<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
 							</a>
 						</div>
 						<div class="suggst-news">
 							<a href="#">
-								<img src="img/mobile-1.png">
+								<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
 								<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
 							</a>
 						</div>
 						<div class="suggst-news">
 							<a href="#">
-								<img src="img/mobile-1.png">
+								<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
 								<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
 							</a>
 						</div>
@@ -254,78 +150,7 @@
 		</div>
 	</div>
 </section>
-
-
-<section>
-	<footer class="footer-des">
-		<div class="container-fluid">
-			<div class="row">
-				<ul class="list-inline">
-					<li>
-						<a href="https://www.facebook.com/brandzbix/"><img src="img/facebook-new.png"></a>
-					</li>
-					<li>
-						<a href="https://www.instagram.com/brandzbix/"><img src="img/instagram-new.png"></a>
-					</li>
-					<li>
-						<a href="linkedin.com/company/brandzbix"><img src="img/linkedin-new.png"></a>
-					</li>			   							   	
-				</ul>
-			</div>
-				 
-			<div class="row">   
-				<ul class="menu list-inline">
-					<li>
-						<a href="index.html">Home</a>
-					</li>
-					<li>
-						<a href="news.html">News</a>
-					</li>
-					<li>
-						<a href="store.html">Store</a>
-					</li>
-					<li>
-						<a href="job.html">Jobs</a>
-					</li>
-					<li>
-						<a href="coupon.html">Coupon</a>
-					</li>
-					<li>
-						<a href="dealwithus.html">Deals</a>
-					</li>
-					<li>
-						<a href="quize.html">Qiuz</a>
-					</li>
-					<li>
-						<a href="blog.html">Blogs</a>
-					</li>
-					<li>
-						<a href="advertise.html">Advertise with us</a>
-					</li>
-					<li>
-						<a href="contact-us.html">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-			<div class="row">
-				<div class="hart-beat">
-					<h3>Made with</h3>
-					<div class="center">
-						<div class="heart"></div>						
-					</div>
-				</div>
-			</div>
-		</div> 
-	</footer>
-	<div class="copyright">
-		<div class="container-fluid">
-			<div class="row text-center">
-			   <p>Copyright © All RIGHTS RESERVED | <a href="#"> BRANDSBIX 2019.</a></p>
-			</div>
-		</div>
-	</div>
-</section>
-  
+<?php include "layouts/footer.php"; ?>
 
 
  <script src="js/highlight.js"></script>
