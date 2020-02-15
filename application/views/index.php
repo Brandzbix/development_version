@@ -39,7 +39,7 @@
     <div class="container-fluid">
     	<div class="row">
 			<div class="col-md-12 coupon-head">
-				<h3>TRENDING <span>NEWS</span></h3>
+				<h3>LATEST <span>NEWS</span></h3>
 			</div>
 		</div>
         <div class="row">
@@ -50,7 +50,7 @@
 							<?php if(count($trendingNews) > 0): ?>
 								<?php foreach($trendingNews as $key => $value): ?>
 							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 indian-news">
-								<a href="<?php echo base_url().strtolower($value["news_type_name"]).'/'.$value["pretty_url"]; ?>">
+								<a href="<?php echo base_url().strtolower('news/'.$value['news_type_name'].'/'.$value['pretty_url']); ?>">
 									<img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>">
 									<h3><?php echo $value["news_heading"]; ?></h3>		
 								</a>

@@ -9,6 +9,7 @@
 		}
 		public function index()
 		{
+			
 			$result["trendingNews"]	=	$this->NewsModel->getTrendingNews();
 			$this->load->view('index',$result);
 		}

@@ -36,7 +36,7 @@
 		<div class="menu">
 			<ul>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "2")? "active": ""; ?>" href="<?php echo base_url(); ?>">HOME</a></li>
-				<li><a class="<?php print ($this->uri->segment(1,2) == "news")? "active": ""; ?>" href="news">NEWS</a></li>
+				<li><a class="<?php print ($this->uri->segment(1,2) == "news")? "active": ""; ?>" href="<?php echo base_url(); ?>news">NEWS</a></li>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "store")? "active": ""; ?>" href="store">STORE</a></li>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "jobs")? "active": ""; ?>" href="#">JOBS</a></li>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "coupon")? "active": ""; ?>" href="coupon">COUPONS</a></li>

@@ -5,20 +5,13 @@
 			<div class="row">
 				<div class="col-md-12 main-news-menu">
 					<div class="news-list">
-						<ul>
-							<li><a href="india">INDIA</a></li>
-							<li><a href="international">INTERNATIONAL</a></li>
-							<li><a href="business">BUSINESS</a></li>
-							<li><a href="entertainment">ENTERTAINMENT</a></li>
-							<li><a href="health">HEALTH</a></li>
-							<li><a href="tech">TECH</a></li>
-							<li><a href="sports">SPORTS</a></li>
-						</ul>
+						<?php include "layouts/news-navbar.php"; ?>
 					</div>
 				</div>			
 			</div>	
 		</div>			
 	</div>
+	
 	<div class="container botton-sec">
 		<div class="row">			
 			<div class="col-md-12">
@@ -188,6 +181,7 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
 </section>
 <?php include "layouts/footer.php"; ?>

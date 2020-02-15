@@ -73,7 +73,10 @@ $route['return-product']=	"Myorders/returnProduct";
 $route["user-profile"]	=	"userProfile/index";
 
 /*News Section Start*/
-$route['news'] 					=	"News/index";
+$route['news']		 			=	"News/index";
+/*News/ with subcategory routes*/
+$route['news/(:any)']		 	=	"News/index/$1";
+$route['news/(:any)/(:any)']	=	"News/index/$1/$1";
 $route['trending/(:any)'] 		=	"News/trending/$1";
 /*@@
 	News by category routes

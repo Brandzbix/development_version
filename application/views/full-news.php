@@ -7,15 +7,7 @@
 			<div class="row">
 				<div class="col-md-12 main-news-menu">
 					<div class="news-list">
-						<ul>
-							<li><a href="india">INDIA</a></li>
-							<li><a href="world">WORLD</a></li>
-							<li><a href="movie">MOVIE</a></li>
-							<li><a href="teach">TEACH</a></li>
-							<li><a href="sports">SPORTS</a></li>
-							<li><a href="business">BUSINESS</a></li>
-							<li><a href="startup">STARTUP</a></li>
-						</ul>
+						<?php include "layouts/news-navbar.php"; ?>
 					</div>
 				</div>			
 			</div>	
@@ -36,7 +28,6 @@
 				<?php endforeach; ?>
 				</div>			
 			</div>
-			
 			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12 suggst-np">				
 				<div class="row">
 					<div class="col-md-12">
