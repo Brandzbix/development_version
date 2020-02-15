@@ -9,8 +9,9 @@
 		}
 		public function index()
 		{
-			
-			$result["trendingNews"]	=	$this->NewsModel->getTrendingNews();
+			/*How many records fetch from database using query*/
+			$numResult = "4";
+			$result["trendingNews"]	=	$this->NewsModel->getAllRecord($numResult);
 			$this->load->view('index',$result);
 		}
 		public function fetch(){

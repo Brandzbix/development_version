@@ -20,7 +20,8 @@
                             <h5>News</h5>
                         </div>
                         <div>
-                        <?php foreach($result as $key => $value): ?>
+                        <?php foreach($result as $key => $value):
+                        ?>
                             <div class="ibox-content no-padding border-left-right">
                                 <img alt="image" class="img-responsive" src="<?php echo base_url().'assets/img/news/'.$value['news_picture']; ?>" style="width: 100%;">
                             </div>

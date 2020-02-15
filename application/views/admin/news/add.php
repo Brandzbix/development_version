@@ -66,6 +66,36 @@
                            </select>
                         </div>
                      </div>
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="topNews">Top News</label>
+                              <select name="topNews" id="topNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1">Yes</option>
+                                 <option value="0" selected="">No</option>
+                              </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="latestNews">Latest News</label>
+                              <select name="latestNews" id="latestNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1">Yes</option>
+                                 <option value="0" selected="">No</option>
+                              </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="suggestedNews">Suggested</label>
+                              <select name="suggestedNews" id="suggestedNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1">Yes</option>
+                                 <option value="0" selected="">No</option>
+                              </select>
+                        </div>
+                     </div>
                      <div class="col-md-12 text-right">
                         <div class="form-group">
                            <input type="submit" name="submit" class="btn btn-info btn-sm">

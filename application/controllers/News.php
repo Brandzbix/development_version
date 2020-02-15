@@ -16,18 +16,26 @@
 			$subNews 	=  $this->uri->segment(2);
 			$subNewsWithUrl 	=  $this->uri->segment(3);
 			if(!empty($news) && empty($subNews)){ // Condition View for all news
-				$this->load->view('news');
-			}else if(!empty($news) && !empty($subNews) && empty($subNewsWithUrl)){ // Condition for news & sub news
+				$numResult	=	10; // fetch all records in news table
+				$data["getAllNews"]	=	$this->NewsModel->getAllRecord($numResult);
+
+				$this->load->view('news',$data);
+			}else if(!empty($news) && !empty($subNews) && empty($subNewsWithUrl)){  // Condition for news & sub news
 				$data['category']	 =     lang_vise_static_fields('eng', 'news_category');
 				foreach ($data['category'] as $key => $value) {
 					if($subNews == $value["cate_name"]){
-						$data["fetchHeadNews"]	=	$this->NewsModel->fetchHeadNews($value["news_type_id"]);
+						$numResult	=	10; // fetch all records in news table
+						$data["getAllNews"]	=	$this->NewsModel->getAllRecord($numResult);
+						$data["fetchHeadNews"]		=	$this->NewsModel->fetchHeadNews($value["news_type_id"]);
 						$data["fetchNewsBySubcategory"]	=	$this->NewsModel->fetchNewsBySubcategory($value["news_type_id"]);
 						$this->load->view('india',$data);
 					}
 				}
 			}else if(!empty($news) && !empty($subNews) && !empty($subNewsWithUrl)){
+
 				$newsHeading 			=	$this->uri->segment(3);
+				$numResult	=	10; // fetch all records in news table
+				$data["getAllNews"]	=	$this->NewsModel->getAllRecord($numResult);
 				$data["newsByUrl"]		=	$this->NewsModel->getNewsByPrettryUrl($newsHeading);
 				$this->load->view("full-news",$data);
 			}else{

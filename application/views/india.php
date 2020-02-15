@@ -58,30 +58,21 @@
 							<div class="suggeted-head">
 								<h3>Suggested News</h3>
 							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
+							<?php foreach($getAllNews as $key => $value):
+								$newStatus = json_decode($value["news_flags"]);
+								if($newStatus->suggestedNews == 1){ ?>
+									<div class="row">
+										<div class="col-md-4">
+											<img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>" alt="">
+										</div>
+										<div class="col-md-8">
+											<a href="<?php echo base_url().strtolower('news/'.$value['news_type_name'].'/'.$value['pretty_url']); ?>" style="color:black;">
+												<?php echo $value["news_heading"]; ?>
+											</a>
+										</div>
+									</div>
+
+								<?php }	endforeach; ?>
 						</div>
 					</div>
 				</div>
@@ -111,30 +102,21 @@
 							<div class="suggeted-head">
 								<h3>Suggested News</h3>
 							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
+							<?php foreach($getAllNews as $key => $value):
+						$newStatus = json_decode($value["news_flags"]);
+						if($newStatus->suggestedNews == 1){ ?>
+							<div class="row">
+									<div class="col-md-4">
+										<img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>" alt="">
+									</div>
+									<div class="col-md-8">
+										<a href="<?php echo base_url().strtolower('news/'.$value['news_type_name'].'/'.$value['pretty_url']); ?>" style="color:black;">
+											<?php echo $value["news_heading"]; ?>
+										</a>
+									</div>
 							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
-							<div class="suggst-news">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/mobile-1.png">
-									<h3>Samsung Diwali Sale: Top offer deals on smartsphones,headphons and more</h3>
-								</a>
-							</div>
+
+						<?php }	endforeach; ?>
 						</div>
 					</div>
 				</div>

@@ -34,7 +34,9 @@
                <h5>News</h5>
             </div>
             <div class="ibox-content">
-               <?php foreach($result as $key => $value):?>
+               <?php foreach($result as $key => $value): 
+                  $statusJson    =  json_decode($value["news_flags"]);
+               ?>
                <form roll="form" action="<?php echo base_url().'admin/NewsController/update';?>"  method="POST" enctype="multipart/form-data" name="addNews">
                   <div class="row">
                      <div class="form-group">
@@ -66,15 +68,46 @@
                            <select class="form-control" id="newsType" name="newsType" >
                               <option value="">--Select News Type--</option>
                               <?php foreach($newsType as $key1 => $value1): 
+
                                  ?>
                                  <option value="<?php echo $value1["news_type_id_pk"]; ?>" <?php if($value1["news_type_id_pk"]==$value["news_type"]){echo "selected";} ?>><?php echo $value1["news_type_name"]; ?></option>
                               <?php endforeach; ?>
                            </select>
                         </div>
                      </div>
-                     <div class="col-md-6">
+                     <div class="col-md-12">
                         <div class="form-group">
                            <img src="<?php echo base_url().'assets/img/news/'.$value['news_picture']; ?>" width="20%">
+                        </div>
+                     </div>
+                      <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="topNews">Top News</label>
+                              <select name="topNews" id="topNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1" <?php if($statusJson->topNews==1): echo "selected"; endif; ?> >Yes</option>
+                                 <option value="0" <?php if($statusJson->topNews==0): echo "selected"; endif; ?>>No</option>
+                              </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="latestNews">Latest News</label>
+                              <select name="latestNews" id="latestNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1" <?php if($statusJson->topNews==1): echo "selected"; endif; ?>>Yes</option>
+                                 <option value="0" <?php if($statusJson->topNews==0): echo "selected"; endif; ?>>No</option>
+                              </select>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="form-group">
+                           <label for="suggestedNews">Suggested</label>
+                              <select name="suggestedNews" id="suggestedNews" class="form-control" data-parsley-required data-parsley-error-message="This felid is required.">
+                                 <option value="">--Please Select--</option>
+                                 <option value="1"<?php if($statusJson->topNews==1):   echo "selected"; endif; ?>>Yes</option>
+                                 <option value="0" <?php if($statusJson->topNews==1):  echo "selected"; endif; ?>>No</option>
+                              </select>
                         </div>
                      </div>
                      <div class="col-md-12 text-right">

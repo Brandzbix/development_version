@@ -75,6 +75,12 @@ class NewsController extends CI_Controller {
    */
    public function store(){
       $data             =  $this->input->post();
+      $newsStatus = array(
+         "topNews"       =>    $data["topNews"],
+         "latestNews"    =>    $data["latestNews"],
+         "suggestedNews" =>    $data["suggestedNews"]
+      );
+      $statusJson       =      json_encode($newsStatus);
       $title            =  strip_tags(($data["newsTitle"]));
       $titleURL         =  strtolower(url_title($title));
       $file_extention   =  pathinfo($_FILES['newsImage']['name'],PATHINFO_EXTENSION);
@@ -107,6 +113,7 @@ class NewsController extends CI_Controller {
                "news_heading"    =>    $data["newsTitle"],
                "news_description"=>    trim($data["newsDesc"]),
                "news_picture"    =>    $fileName,
+               "news_flags"      =>    $statusJson,
                "create_date"     =>    date('Y-m-d H:i:s')
             );
             $this->NewsModel->store($this->tbl_news,$dataArray);
@@ -155,6 +162,12 @@ class NewsController extends CI_Controller {
     public function update(){
         if($this->session->userdata && isset($this->session->userdata['logged_in'])):
             $data   =   $this->input->post();
+            $newsStatus = array(
+               "topNews"       =>    $data["topNews"],
+               "latestNews"    =>    $data["latestNews"],
+               "suggestedNews" =>    $data["suggestedNews"]
+            );
+            $statusJson       =      json_encode($newsStatus);
             /*@@if news image is not exist or image is new*/
             if(!empty($_FILES["newsImage"]["name"])){
                $getFileExtention    =   pathinfo($_FILES["newsImage"]["name"],PATHINFO_EXTENSION);
@@ -178,35 +191,37 @@ class NewsController extends CI_Controller {
                         $target         =   "assets/img/news/".$fileImgAdd;
                         if(move_uploaded_file($_FILES["newsImage"]["tmp_name"],$target)){
                            $update      =   array(
-                               "news_type"       =>    $data["newsType"],
-                               "pretty_url"      =>    strtolower(url_title($data["newsTitle"])),
-                               "news_heading"    =>    $data["newsTitle"],
-                               "news_description"=>    trim($data["newsDesc"]),
-                               "news_picture"    =>    $fileImgAdd,
-                               "create_date"     =>    date('Y-m-d H:i:s') 
+                              "news_type"       =>    $data["newsType"],
+                              "pretty_url"      =>    strtolower(url_title($data["newsTitle"])),
+                              "news_heading"    =>    $data["newsTitle"],
+                              "news_description"=>    trim($data["newsDesc"]),
+                              "news_picture"    =>    $fileImgAdd,
+                              "news_flags"      =>    $statusJson,
+                              "create_date"     =>    date('Y-m-d H:i:s') 
                            );
                         if($this->NewsModel->updateNews($data["newId"],$update)){
-                            $response       =   array(
-                                    "type"      =>  "success",
-                                    "message"   =>  "News update successfully" 
-                                );
-                             }  
+                           $response       =   array(
+                                 "type"      =>  "success",
+                                 "message"   =>  "News update successfully" 
+                             );
+                           }  
                         }
                     }
                 }
             }else{
                 $update    =   array(
-                   "news_type"       =>    $data["newsType"],
-                   "pretty_url"      =>    strtolower(url_title($data["newsTitle"])),
-                   "news_heading"    =>    $data["newsTitle"],
-                   "news_description"=>    trim($data["newsDesc"]),
-                   "news_picture"    =>    $data["existImage"],
-                   "create_date"     =>    date('Y-m-d H:i:s') 
+                  "news_type"       =>    $data["newsType"],
+                  "pretty_url"      =>    strtolower(url_title($data["newsTitle"])),
+                  "news_heading"    =>    $data["newsTitle"],
+                  "news_description"=>    trim($data["newsDesc"]),
+                  "news_picture"    =>    $data["existImage"],
+                  "news_flags"      =>    $statusJson,
+                  "create_date"     =>    date('Y-m-d H:i:s') 
                 );
                if($this->NewsModel->updateNews($data["newId"],$update)){
                     $response       =   array(
-                            "type"      =>  "success",
-                            "message"   =>  "News update successfully" 
+                           "type"      =>  "success",
+                           "message"   =>  "News update successfully" 
                         );
                      }  
                 }

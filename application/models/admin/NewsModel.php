@@ -9,7 +9,7 @@ Class NewsModel extends CI_Model {
 
   // Fetch records
 public function getData($rowno,$rowperpage,$search="") {
-      $this->db->select('tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name,tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.create_date');
+      $this->db->select('tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name,tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.news_flags,tbl_news.create_date');
       $this->db->from($this->tbl_news);
       $this->db->join($this->tbl_news_type,'tbl_news_type.news_type_id_pk=tbl_news.news_type');
       $this->db->order_by('tbl_news.news_id_pk','DESC');
@@ -24,7 +24,7 @@ public function getData($rowno,$rowperpage,$search="") {
 }
   // Select total records
 public function getrecordCount($search = '') {
-    $this->db->select('count(*) as allcount,tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name,tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.create_date');
+    $this->db->select('count(*) as allcount,tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name,tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.news_flags,tbl_news.create_date');
       $this->db->from($this->tbl_news);
       $this->db->join($this->tbl_news_type,'tbl_news_type.news_type_id_pk=tbl_news.news_type');
     if($search != ''){
@@ -48,7 +48,7 @@ public function store($tbl_name,$data){
     @@@-------- Get specified news by id-----------@@@ 
 */
 public function getNewsById($id){
-    $this->db->select('tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.create_date,tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name')
+    $this->db->select('tbl_news.news_id_pk,tbl_news.news_type,tbl_news.pretty_url,tbl_news.news_heading,tbl_news.news_description,tbl_news.news_picture,tbl_news.news_flags,tbl_news.create_date,tbl_news_type.news_type_id_pk,tbl_news_type.news_type_name')
     ->from($this->tbl_news)
     ->join($this->tbl_news_type,'tbl_news.news_type = tbl_news_type.news_type_id_pk')
     ->where('tbl_news.news_id_pk',$id);

@@ -47,7 +47,9 @@
                 <div class="tab-content tab-news-box" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="ind-news" role="tabpanel" aria-labelledby="nav-home-tab">
 						<div class="row">
-							<?php if(count($trendingNews) > 0): ?>
+							<?php
+
+							 if(count($trendingNews) > 0): ?>
 								<?php foreach($trendingNews as $key => $value): ?>
 							<div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12 indian-news">
 								<a href="<?php echo base_url().strtolower('news/'.$value['news_type_name'].'/'.$value['pretty_url']); ?>">

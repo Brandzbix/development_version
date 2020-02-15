@@ -1,4 +1,5 @@
-<?php include "layouts/header.php"; ?>
+<?php include "layouts/header.php";
+?>
 <section class="main-news-op">
 	<div class="container-fluid top-news">
 		<div class="container" style="padding-left:4px;">
@@ -19,33 +20,30 @@
 					<a href="#"><img src="<?php echo base_url(); ?>assets/img/ae-2019.jpg"></a>
 				</div>
 			</div>
-			<div class="col-md-12">			
+			<!-- <div class="col-md-12">			
 				<div class="brking-news">
 					<span class="breaktext"><a href="#" target="_blank">BRAKING NEWS</a></span>
 					<p class="breakinghead"><a href="#" target="_blank">Mumbai: MNS leader Raj Thackeray arrives at Siddhivinayak temple</a><span><i class="fa fa-times" aria-hidden="true"></i></span></p>					
 				</div>
-			</div>					
+			</div>	 -->				
 		</div>
 		<div class="row news-main">
 			<div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
 				<div class="new-video-box">
-					<div class="new-video">
+					<!-- <div class="new-video">
 						<a href="#"><img src="<?php echo base_url(); ?>assets/img/haryana-bjp.jpg"></a>		
 						<h4><a href="#">In the Haryana Assembly elections, BJP has entered the electoral arena with the intention of crossing 75</a></h3>
-					</div>
+					</div> -->
 					<div class="row new-dis">
+						<?php foreach($getAllNews as $key => $value): ?>
 						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
 							<div class="small-dis">
-								<a href="#"><img src="<?php echo base_url(); ?>assets/img/vote-1.jpg"></a>					
-								<h4><a href="#">Maharashtra Assembly Election 2019 Live: Sachin Tendulkar urges Mumbai to come out and vote</a></h3>
+								<a href="#"><img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>"></a>					
+								<h4><a href="#"><?php echo $value["news_heading"]; ?></a></h3>
 							</div>
 						</div>
-						<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
-							<div class="small-dis">
-								<a href="#"><img src="<?php echo base_url(); ?>assets/img/polling-1.jpg"></a>					
-								<h4><a href="#">Maharashtra Assembly Election 2019 Live: Sachin Tendulkar urges Mumbai to come out and vote</a></h3>
-							</div>
-						</div>
+					<?php endforeach; ?>
+						
 					</div>
 				</div>
 			</div>
@@ -54,78 +52,22 @@
 				<h3>TOP NEWS</h3>
 					 <div class="scrollbars">
 						<div class="srol-news">
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
+							<?php foreach($getAllNews as $key => $value):
+								$newStatus = json_decode($value["news_flags"]);
+								echo $newStatus;
+								die();
+								if($newStatus->topNews == 1){ ?>
+									<div class="row">
+										<div class="col-md-4">
+											<img src="<?php echo base_url()."assets/img/news/".$value["news_picture"]; ?>" alt="">
+										</div>
+										<div class="col-md-8">
+											<a href="<?php echo base_url().strtolower('news/'.$value['news_type_name'].'/'.$value['pretty_url']); ?>" style="color:black;">
+												<?php echo $value["news_heading"]; ?>
+											</a>
+										</div>
 									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
-							<div class="news-top-sec">
-								<a href="#">
-									<img src="<?php echo base_url(); ?>assets/img/top-1.webp">
-									<div class="cntnt">
-										<h4>IND vs SA Live Score, 3rd Test Day 3: South Africa continue to slide after lunch</h4>										
-									</div>
-								</a>
-							</div>
+								<?php }	endforeach; ?>
 						</div>
 					</div>
 				</div>
