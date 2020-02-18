@@ -75,7 +75,7 @@ if (!empty($this->session->flashdata('message'))): ?>
                               <label>Color
                               <span class="mindetory">*</span>
                               </label>
-                              <select name="proType" id="" class="form-control" data-parsley-required data-parsley-error-message = "This felid is required">
+                              <select name="proType" id="proType" class="form-control" data-parsley-required data-parsley-error-message = "This felid is required">
                                  <option value="">--Please Select--</option>
                                  <option value="blue">Blue</option>
                               </select>
