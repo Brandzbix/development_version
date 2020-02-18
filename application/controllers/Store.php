@@ -7,9 +7,9 @@
 			parent::__construct();
 		}
 		public function store()
-	{
-		$this->load->view('store');
-	}
+		{
+			$this->load->view('store');
+		}
 	}
 
 ?>
