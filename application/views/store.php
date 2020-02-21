@@ -42,7 +42,7 @@
 			<div class="product-tabs">
 			  <div class="tab-button-outer">
 				<ul id="tab-button">
-				  <li><a href="#tab01">Cloths</a></li>
+				  <li><a href="#tab01">Bags</a></li>
 				  <li><a href="#tab02">Watchs</a></li>				  
 				</ul>
 			  </div>
@@ -54,15 +54,17 @@
 			  </div> -->
 			  <div id="tab01" class="tab-contents">
 				<div class="row">
+					<?php foreach($bags as $key => $value): ?>
 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
 						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
+							<a href="e-com.html"><img src="<?php echo base_url().'assets/img/product/'.$value["pro_image"]; ?>"></a>
+							<h3><?php echo ucwords($value["product_type"]); ?> <span>By <?php echo $value["brand_name"]; ?></span></h3>
+							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png"><?php echo $value["discount_price"]; ?></h4>
+							<a href="<?php echo base_url('Store/addToCart/'.$value['product_id_pk']); ?>" class="btn btn-krt">ADD TO KART</a>
 							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
 						</div>
 					</div>
+				<?php endforeach; ?>
 				</div>
 			  </div>
 			  <div id="tab02" class="tab-contents">

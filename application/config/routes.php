@@ -89,5 +89,11 @@ $route['tech'] 					=	"News/tech";
 $route['sports'] 				=	"News/sports";
 
 
+
+#Cart Routes
+$route['cart'] 				 = 'CartController/index';
+$route['checkout']			 = 'CheckoutController/index';
+$route['checkout2']			 = 'CheckoutController/checkout2';
+
 /*ADMIN ROUTES START FROM HERE*/
 include('admin-routes.php');

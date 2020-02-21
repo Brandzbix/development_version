@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +45,14 @@
 				<li class="center-link"><a class="" href="#">QUIZE</a></li>
 				<li><a class="" href="client-login"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
 				<li><a class="" href="client-login" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>
-				<li class="count-kart"><a class="" href="add-cart" style="font-weight:600;"><i class="fa fa-shopping-cart" style="margin-right:4px;"></i><span class="kart-box">1</span> Cart</a></li>								
+				<li class="count-kart">
+					<a class="" href="<?php echo base_url('cart'); ?>" style="font-weight:600;">
+						<i class="fa fa-shopping-cart" style="margin-right:4px;">
+							
+						</i>
+						<span class="kart-box"><?php echo count($this->cart->contents()); ?></span>
+				 Cart</a>
+				</li>								
 				<li class="profile-dlt">
 					<a href="#" onclick="toggler('myContent');"><img src="<?php echo base_url(); ?>assets/img/complent.png"></a>	</li>
 			</ul>						     
