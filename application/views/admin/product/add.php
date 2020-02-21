@@ -28,7 +28,7 @@
 <?php endif;?>
 <div id="wrapper">
    <div class="wrapper wrapper-content animated fadeIn">
-      <?php echo form_open('admin/Product/store', array('name' => 'add_product', 'data-parsley-validate' => '', 'enctype' => 'multipart/form-data')); ?>
+      <?php echo form_open('admin/ProductController/store', array('name' => 'add_product', 'data-parsley-validate' => '', 'enctype' => 'multipart/form-data')); ?>
       <div class="row ">
          <div class="col-lg-10 col-md-10 col-lg-offset-1 col-md-offset-1">
             <div class="ibox float-e-margins">
@@ -45,9 +45,8 @@
                                     <label>Product Name
                                     <span class="mindetory">*</span>
                                     </label>
-                                    <input type="text" name="proName" class="form-control" disabled="" value="Baywatch">
-                                    <!--
-                                       <?php echo form_input(array('type' => 'text', 'name' => 'product_name', 'placeholder' => 'Enter Product Name', 'class' => 'form-control', 'data-parsley-required' => '', 'data-parsley-error-message' => 'Product Name is mandatory')); ?> -->
+                                    <input type="text" name="proName" class="form-control" value="Baywatch">
+                                   
                                  </div>
                               </div>
                               <div class="col-lg-3 col-md-3">
@@ -75,7 +74,7 @@
                                     <label>Color
                                     <span class="mindetory">*</span>
                                     </label>
-                                    <select name="proType" id="proType" class="form-control" data-parsley-required data-parsley-error-message = "Product color is required.">
+                                    <select name="proColor" id="proColor" class="form-control" data-parsley-required data-parsley-error-message = "Product color is required.">
                                        <option value="">--Please Select--</option>
                                        <option value="blue">Blue</option>
                                     </select>
@@ -193,7 +192,7 @@
                                              <label>Style Code
                                              <span class="mindetory">*</span>
                                              </label>
-                                             <input type="text" name="styleCover" class="form-control" placeholder="Like: BP06"  data-parsley-required data-parsley-error-message="This felid is required.">
+                                             <input type="text" name="styleCode" class="form-control" placeholder="Like: BP06"  data-parsley-required data-parsley-error-message="This felid is required.">
                                           <small>If not available please enter N/A</small>
                                           </div>
                                        </div>
@@ -248,7 +247,7 @@
                                              <label>Product Image
                                              <span class="mindetory">*</span>
                                              </label>
-                                             <input type="file" name="multiUploade[]" class="form-control" multiple="" data-parsley-required data-parsley-error-message="Product image is required">
+                                             <input type="file" name="multiUploade[]" class="form-control" multiple data-parsley-required data-parsley-error-message="Product image is required">
                                           </div>
                                        </div>
                                     </div>
@@ -263,6 +262,7 @@
                                           </div>
                                        </div>
                                     </div>
+
                                     <div class="row">
                                        <div class="col-lg-3 col-md-3 ">
                                           <div class="form-group">

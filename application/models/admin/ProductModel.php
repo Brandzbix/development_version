@@ -2,38 +2,27 @@
 	defined('BASEPATH') or die('No Direct Script Allow');
 	class ProductModel extends CI_Model
 	{
+		protected $tbl_product 			 = "tbl_product";
+		protected $tbl_product_price 	 = "tbl_product_price";
+		protected $tbl_product_feature	 = "tbl_product_feature";
+		protected $tbl_product_img 		 = "tbl_product_img";
 		function __construct()
 		{
 			parent::__construct();
 		}
 		 // Fetch records
-	  	public function getData($rowno,$rowperpage,$search="",$pro_status) {
+	  	public function getData($rowno,$rowperpage,$search="") {
 		  $this->db->select(
 			'
-				category.category_id_pk,
-				category.category,
-				tbl_subcategory.subcategory_id_pk,
-				tbl_subcategory.category_id_fk,
-				tbl_subcategory.subcategory_name,
-				products.product_id_pk,
-				products.productname,
-				products.category_id_fk,
-				products.packsize,
-				products.composition,
-				products.subcategory,
-				products.indications,
-				products.dosage,
-				products.sideeffects,
-				products.photobig,
-				products.is_trending
+				tbl_product.product_id_pk,tbl_product.product_type,tbl_product.sku,tbl_product.status,
+				tbl_product_price.product_id_fk,tbl_product_price.discount_price
 			'
 		);
-		$this->db->from('products');
-		$this->db->join('category','category.category_id_pk = products.category_id_fk');		
-		$this->db->join('tbl_subcategory','tbl_subcategory.subcategory_id_pk = products.subcategory');
+		$this->db->from($this->tbl_product);
+		$this->db->join($this->tbl_product_price,'tbl_product.product_id_pk=tbl_product_price.product_id_fk');
 		$this->db->order_by('product_id_pk','DESC');
 		if($search != ''){
-			$this->db->like('productname',$search);
+			$this->db->like($this->tbl_product.'.'.'sku',$search);
 		}
 		$this->db->limit($rowperpage, $rowno); 
 		$query = $this->db->get();
@@ -43,11 +32,11 @@
 	  // Select total records
 	  public function getrecordCount($search = '') {
 	   $this->db->select('count(*) as allcount');
-	   $this->db->from('products');
-	   if($search != ''){
-	      $this->db->like('productname', $search);
+	   $this->db->from('tbl_product');
+	  	if($search != ''){
+	      $this->db->like('sku', $search);
 	      /*$this->db->or_like('content', $search);*/
-	   }
+	   	}
 	   $query = $this->db->get();
 	   $result = $query->result_array();
 	   return $result[0]['allcount'];
@@ -71,53 +60,46 @@
 		}
 		/*Here we created final registration*/
 		public function insert($tbl_name,$data){
-			$this->db->insert($tbl_name,$data);
-			$insert_id = $this->db->insert_id();
-			return  $insert_id;
+				$this->db->insert($tbl_name,$data);
+				$insert_id = $this->db->insert_id();
+				return  $insert_id;
 
 		}
 		public function getProductDetails($id){
 			$this->db->select(
-			'	category.category_id_pk,
-				category.category,
-				tbl_subcategory.subcategory_id_pk,
-				tbl_subcategory.subcategory_name,
-				products.product_id_pk,
-				products.productname,
-				products.category_id_fk,
-				products.packsize,
-				products.composition,
-				products.subcategory,
-				products.indications,
-				products.dosage,
-				products.sideeffects,
-				products.photobig,
-				products.is_trending,
-				tbl_meta.product_id_fk,
-				tbl_meta.url_slug,
-				tbl_meta.meta_title,
-				tbl_meta.meta_description,
-				tbl_meta.meta_keyword
 			'
-		);
-			$this->db->from('products');
-			$this->db->join('tbl_meta','tbl_meta.product_id_fk=products.product_id_pk');
-			$this->db->join('category','products.category_id_fk=category.category_id_pk');
-			$this->db->join('tbl_subcategory','products.subcategory=tbl_subcategory.subcategory_id_pk');
-
-			$this->db->where('products.product_id_pk',$id);
+				tbl_product.product_id_pk,tbl_product.brand_name,tbl_product.product_type,tbl_product.sku,tbl_product.color,tbl_product.status,tbl_product.created_date,tbl_product_price.product_id_fk,tbl_product_price.pro_price,tbl_product_price.discount_price,tbl_product_price.total_discount,tbl_product_feature.product_id_fk,tbl_product_feature.ideal_for,tbl_product_feature.trolley_support,laptop_sleeve,tbl_product_feature.rain_cover,tbl_product_feature.style_code,tbl_product_feature.material,tbl_product_feature.water_proof,tbl_product_feature.capacity,tbl_product_feature.dimension,tbl_product_feature.weight,tbl_product_feature.description
+			'
+			);
+			$this->db->from($this->tbl_product);
+			$this->db->join($this->tbl_product_price,'tbl_product.product_id_pk=tbl_product_price.product_id_fk');
+			$this->db->join($this->tbl_product_feature,'tbl_product.product_id_pk=tbl_product_feature.product_id_fk');
+			$this->db->where('tbl_product.product_id_pk',$id);
 			$query = $this->db->get();
-	        $data = $query->row();
+	        $data = $query->result_object();
 	        return $data;
 
+		}
+		/*Get product image by category*/
+		public function getProImageById($id,$limit){
+			$this->db->select('tbl_product_img.product_img_pk,tbl_product_img.product_id_fk,tbl_product_img.pro_image');
+			$this->db->from($this->tbl_product_img);
+			$this->db->where('tbl_product_img.product_id_fk',$id);
+			if($limit > 0){
+				$this->db->limit(1);
+			}
+			$query = $this->db->get();
+			return $result 	=	$query->result_array();
 		}
 		/*Update Profile Code After Registration Created*/
 		public function updateProduct($whereCondition,$tbl_name,$data){
 			$this->db->where($whereCondition);
 		$this->db->update($tbl_name,$data);
-		echo $this->db->last_query();
 		return TRUE;
 		}
+
+		
+
 		/*Delete Products*/
 		public function delete($where,$tbl_name){
 			$this->db->where($where);

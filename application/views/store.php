@@ -46,78 +46,14 @@
 				  <li><a href="#tab02">Watchs</a></li>				  
 				</ul>
 			  </div>
-			  <div class="tab-select-outer">
+			<!--   <div class="tab-select-outer">
 				<select id="tab-select">
 				  <option value="#tab01">Cloths</option>
 				  <option value="#tab02">Watchs</option>				 
 				</select>
-			  </div>
-
+			  </div> -->
 			  <div id="tab01" class="tab-contents">
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/tshart.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="e-com.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
 						<div class="store-product">
 							<a href="e-com.html"><img src="<?php echo base_url(); ?>assets/img/tshart.png"></a>
@@ -131,69 +67,6 @@
 			  </div>
 			  <div id="tab02" class="tab-contents">
 				<div class="row">
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
-					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
-						<div class="store-product">
-							<img src="<?php echo base_url(); ?>assets/img/watch.png">
-							<h3>Team 99 T-shart <span>By Redwolf</span></h3>
-							<h4><img src="<?php echo base_url(); ?>assets/img/rupee.png">499</h4>
-							<a href="add-kart.html" class="btn btn-krt">ADD TO KART</a>
-							<a href="add-kart.html" class="btn btn-buy">BUY NOW</a>
-						</div>
-					</div>
 					<div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
 						<div class="store-product">
 							<img src="<?php echo base_url(); ?>assets/img/watch.png">

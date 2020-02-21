@@ -32,7 +32,7 @@
                   </li>
                     <li> <a href="<?php echo base_url('admin/dashboard');  ?>">
 <!--                             <i class="fa fa-tachometer" aria-hidden="true"></i>
- -->                            <span>Dashboard</span>
+ -->                 <span>Dashboard</span>
                           </a>
                     </li>
                     <?php

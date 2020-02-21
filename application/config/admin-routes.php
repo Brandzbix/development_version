@@ -35,6 +35,8 @@ $route['admin/news/show/(:num)'] = "admin/NewsController/show/$1";
 $route['admin/news/edit/(:num)'] = "admin/NewsController/edit/$1";
 
 /*Product Routes*/
-$route['admin/product/add'] = "admin/ProductController/create"
+$route['admin/product/listing'] 		= 		"admin/ProductController/index";
+$route['admin/product/listing/(:any)'] 		= 		"admin/ProductController/index/$1";
+$route['admin/product/add'] 			= 		"admin/ProductController/create";
 
 ?>
