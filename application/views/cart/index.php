@@ -1,4 +1,5 @@
-<?php $this->load->view('layouts/header'); ?>
+<?php 
+$this->load->view('layouts/header'); ?>
 <section class="slider-sec">
    <div class="container-fluid">
       <div class="row">
@@ -36,11 +37,13 @@
    <div class="container-fluid">
       <div class="row border-space">
          <?php if($this->cart->total_items() > 0){  ?>
-            <?php foreach($cartItems as $item):   ?>
+            <?php foreach($cartItems as $item):  
+                $result     =   explode(',',$item['image']);
+            ?>
          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
             <div class="shoping-img">
             <h2>Shopping Cart</h2>
-               <img src="<?php echo base_url().'assets/img/product/'.$item["image"]; ?>" width="100">
+               <img src="<?php echo base_url().'assets/img/product/'.$item['id'].'/'.$result[0]; ?>" width="100">
                <div class="shoping-dtl">                 
                   <h3><?php echo ucwords($item["name"]); ?></h3>
                   <p>The price and availability of items<br>The price </p>
@@ -50,19 +53,20 @@
          </div>
          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
             <div class="price-detail">
-               <h3>Price</h3>
+               <h3>Unit Price</h3>
                <span><i class="fa fa-inr" aria-hidden="true"></i> <?php echo $item["price"]; ?>.00</span>
             </div>
          </div>
          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
             <div class="quantity-block">
                <h3>Quantity</h3>
-               <select class="form-control drop-menu" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')">
-                 <option value="1">1</option>
-                 <option value="2">2</option>
-                 <option value="4">4</option>
-                 <option value="5">5</option>
-               </select>
+               <input type="number" value="<?php echo $item["qty"]; ?>" onchange="updateCartItem(this, '<?php echo $item["rowid"]; ?>')">
+            </div>
+         </div>
+          <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 col-12">
+            <div class="quantity-block">
+               <h3>Sub Total</h3>
+               <h3><h4><?php echo $item["subtotal"]; ?>.00</h4></h3>
             </div>
          </div>
          <?php endforeach; ?> 
@@ -77,7 +81,7 @@
             <div class="grnd-btn-kart">
                <h3>Subtotal(<?php echo $this->cart->total_items(); ?> item)<span><i class="fa fa-inr" aria-hidden="true"></i><?php echo number_format($this->cart->total()); ?>.00</span></h3>
                <a href="store.html" class="continue-shoping">Continue Shopping</a>
-               <a href="confermation-address.html" class="bye-shoping">Proceed to Buy</a>
+               <a href="<?php echo base_url(); ?>checkout" class="bye-shoping">Proceed to Buy</a>
             </div>
          </div>
       </div>

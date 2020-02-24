@@ -25,7 +25,7 @@ class Store extends CI_Controller
          'qty'            => '1',
          'price'          => $product['discount_price'],
          'name'           => $product['product_type'],
-         'image'          => $product['pro_image']
+         'image'          => $product['pro_image1']
       );
       $this->cart->insert($data);
       // Redirect to the cart page
