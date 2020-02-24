@@ -100,5 +100,8 @@ $route['checkout2']			 = 'CheckoutController/checkout2';
 $route['e-com/(:num)'] 				 = 'Product/index/$1';
 
 
+$route['contact-us'] 				 = 'Sendsms/contactus';
+
+
 /*ADMIN ROUTES START FROM HERE*/
 include('admin-routes.php');

@@ -2,8 +2,7 @@
    defined('BASEPATH') OR exit('No direct script access allowed');
    class CheckoutController extends CI_Controller
    {
-       function __construct()
-       {
+      function __construct(){
            parent::__construct();
            // Load form library & helper
            $this->load->library('form_validation');
@@ -29,16 +28,16 @@
          if ($this->cart->total_items() <= 0) {
             redirect(base_url());
          }
-            $formData =  $this->input->post(); 
-            // Redirect if the cart is empty
-            $orderDetail = $data = array();
-             // If order request is submitted
-            $submit      = $this->input->post('placeOrder');
-            // Customer data
-            $data['orderDetail'] = $orderDetail;
-            // Retrieve cart data from the session
-            $data['cartItems']   = $this->cart->contents();
-            $this->load->view($this->controller . '/index', $data);
+         $formData =  $this->input->post(); 
+         // Redirect if the cart is empty
+         $orderDetail = $data = array();
+          // If order request is submitted
+         $submit      = $this->input->post('placeOrder');
+         // Customer data
+         $data['orderDetail'] = $orderDetail;
+         // Retrieve cart data from the session
+         $data['cartItems']   = $this->cart->contents();
+         $this->load->view($this->controller . '/index', $data);
        }
    
    
