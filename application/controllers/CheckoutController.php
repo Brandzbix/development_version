@@ -33,12 +33,12 @@
             // Redirect if the cart is empty
             $orderDetail = $data = array();
              // If order request is submitted
-           $submit      = $this->input->post('placeOrder');
-           // Customer data
-           $data['orderDetail'] = $orderDetail;
-           // Retrieve cart data from the session
-           $data['cartItems']   = $this->cart->contents();
-           $this->load->view($this->controller . '/index', $data);
+            $submit      = $this->input->post('placeOrder');
+            // Customer data
+            $data['orderDetail'] = $orderDetail;
+            // Retrieve cart data from the session
+            $data['cartItems']   = $this->cart->contents();
+            $this->load->view($this->controller . '/index', $data);
        }
    
    

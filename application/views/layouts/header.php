@@ -38,10 +38,10 @@
 			<ul>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "2")? "active": ""; ?>" href="<?php echo base_url(); ?>">HOME</a></li>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "news")? "active": ""; ?>" href="<?php echo base_url(); ?>news">NEWS</a></li>
-				<li><a class="<?php print ($this->uri->segment(1,2) == "store")? "active": ""; ?>" href="store">STORE</a></li>
+				<li><a class="<?php print ($this->uri->segment(1,2) == "store")? "active": ""; ?>" href="<?php echo base_url(); ?>store">STORE</a></li>
 				<li><a class="<?php print ($this->uri->segment(1,2) == "jobs")? "active": ""; ?>" href="#">JOBS</a></li>
-				<li><a class="<?php print ($this->uri->segment(1,2) == "coupon")? "active": ""; ?>" href="coupon">COUPONS</a></li>
-				<li><a class="<?php print ($this->uri->segment(1,2) == "dealwithus")? "active": ""; ?>" href="dealwithus">DEALS</a></li>
+				<li><a class="<?php print ($this->uri->segment(1,2) == "coupon")? "active": ""; ?>" href="<?php echo base_url(); ?>coupon">COUPONS</a></li>
+				<li><a class="<?php print ($this->uri->segment(1,2) == "dealwithus")? "active": ""; ?>" href="<?php echo base_url(); ?>dealwithus">DEALS</a></li>
 				<li class="center-link"><a class="" href="#">QUIZE</a></li>
 				<li><a class="" href="client-login"  style="font-weight:600;"><i class="fa fa-user-circle-o" style="margin-right:4px;"></i> Sign In</a></li>
 				<li><a class="" href="client-login" style="font-weight:600;"><i class="fa fa-user-circle-o"  style="margin-right:4px;"></i> Sign Up</a></li>

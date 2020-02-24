@@ -22,7 +22,7 @@ class Store extends CI_Controller
 
       $data = array(
          'id'             => $product['product_id_pk'],
-         'qty'            => '1',
+         'qty'            =>  $this->input->post('qty'),
          'price'          => $product['discount_price'],
          'name'           => $product['product_type'],
          'image'          => $product['pro_image1']

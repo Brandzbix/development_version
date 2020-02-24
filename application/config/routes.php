@@ -95,5 +95,10 @@ $route['cart'] 				 = 'CartController/index';
 $route['checkout']			 = 'CheckoutController/index';
 $route['checkout2']			 = 'CheckoutController/checkout2';
 
+
+/*Product Controller Routes*/
+$route['e-com/(:num)'] 				 = 'Product/index/$1';
+
+
 /*ADMIN ROUTES START FROM HERE*/
 include('admin-routes.php');
